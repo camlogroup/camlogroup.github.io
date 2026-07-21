@@ -6,11 +6,31 @@
     <title>News Releases</title>
     <link rel="icon" type="image/png" href="favicon.png">
 
-    <!-- ĐOẠN MÃ CSS LÀM CHỮ PHÁT SÁNG MÀU CAM KHI DI CHUỘT VÀO -->
+    <!-- HIỆU ỨNG TƯƠNG TÁC NÚT BẤM CHUẨN CỦA CỤ BUFFETT -->
     <style>
-        table tr td a:hover {
-            color: #FF9933 !important; /* Màu cam phát sáng */
-            text-decoration: underline; /* Giữ gạch chân cổ điển */
+        /* 1. Thiết lập cho nút Pre-2025 trong bảng */
+        table tr td.nav-btn a {
+            color: #000000 !important;
+            text-decoration: none !important;
+            display: block;
+            font-weight: bold;
+        }
+
+        /* Khi di chuột vào ô: Ô biến thành NỀN TRẮNG và CHỮ ĐỔI SANG MÀU CAM */
+        table tr td.nav-btn:hover {
+            background-color: #FFFFFF !important;
+        }
+        table tr td.nav-btn:hover a {
+            color: #FF9933 !important;
+        }
+
+        /* 2. Thiết lập tương tự cho dòng Back to Home Page ở trên nếu bạn muốn đồng bộ */
+        .back-link a {
+            color: #0033CC;
+            text-decoration: underline;
+        }
+        .back-link a:hover {
+            color: #FF9933 !important;
         }
     </style>
 </head>
@@ -21,8 +41,8 @@
         <b>Language:</b> English | <a href="reports-vi.html">Tiếng Việt</a>
     </div>
 
-    <!-- Đường dẫn quay lại trang chủ (ĐỂ NGUYÊN THEO Ý BẠN) -->
-    <div style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">
+    <!-- Đường dẫn quay lại trang chủ -->
+    <div class="back-link" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">
         <p><a href="index.html">Back to Home Page</a></p>
     </div>
 
@@ -37,15 +57,15 @@
     <!-- TIÊU ĐỀ PHÂN LOẠI NĂM TIN TỨC -->
     <h2 style="font-size: 18px; margin-top: 20px; margin-bottom: 20px; color: #000000; font-weight: bold;">2026 News Releases</h2>
 
-    <!-- THANH MENU 2 NÚT THEO ĐÚNG Ý BẠN -->
+    <!-- THANH MENU 2 NÚT CHUYỂN ĐỔI PHỒNG XẸP TUYỆT ĐỐI -->
     <table border="1" cellspacing="0" cellpadding="6" style="border-collapse: collapse; border-color: #D3D3D3; font-size: 14px; text-align: center; margin-bottom: 30px;">
         <tr>
-            <!-- Ô 1: Tin tức từ trước 2025 (Phồng màu xanh, di chuột hóa cam) -->
-            <td width="80" bgcolor="#F0F4F8">
-                <a href="#" style="font-weight: bold; display: block; text-decoration: none; color: #0033CC;">Pre-2025</a>
+            <!-- Ô 1: Pre-2025 (Mặc định nền xanh nhạt chữ đen. Di chuột vào hóa nền trắng chữ cam. Rời chuột trả về nguyên bản) -->
+            <td width="80" bgcolor="#F0F4F8" class="nav-btn" style="transition: background-color 0.1s;">
+                <a href="#">Pre-2025</a>
             </td>
            
-            <!-- Ô 2: Năm hiện tại đang đứng xem (Bẹp xuống màu trắng, không có link) -->
+            <!-- Ô 2: Năm 2026 hiện tại (Đang xem nên cố định bẹp xuống màu trắng, chữ đen, không có link) -->
             <td width="80" bgcolor="#FFFFFF" style="font-weight: bold; color: #000000; cursor: default;">
                 2026
             </td>
