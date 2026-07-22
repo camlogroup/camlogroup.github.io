@@ -54,9 +54,9 @@
             border: 1px solid #D3D3D3;
         }
         .slider-window {
-            height: 340px; /* Khung dẹt mảnh cố định diện tích */
+            height: 240px; /* Khung dẹt mảnh cố định diện tích */
             width: 100%;
-            max-width: 340px;
+            max-width: 240px;
             overflow: hidden;
             position: relative;
         }
@@ -67,7 +67,7 @@
         }
         .slider-track img {
             width: 100%;
-            height: 340px;
+            height: 240px;
             object-fit: contain;
             cursor: pointer;
             background: #FFFFFF;
@@ -142,12 +142,12 @@
     <div style="display: flex; gap: 30px; margin-bottom: 30px; flex-wrap: wrap;">
         
         <!-- CỘT TRÁI: BIỂU ĐỒ DATAWRAPPER CO GỌN GÀNG -->
-        <div style="flex: 1; min-width: 320px;">
+        <div style="flex: 2; min-width: 320px;">
            <div style="min-height:394px" id="datawrapper-vis-iRCOr"><script type="text/javascript" defer src="https://datawrapper.dwcdn.net/iRCOr/embed.js" charset="utf-8" data-target="#datawrapper-vis-iRCOr"></script><noscript><img src="https://datawrapper.dwcdn.net/iRCOr/full.png" alt="Performance since Inception (Line chart)" /></noscript></div>
         </div>
 
         <!-- CỘT PHẢI: HỘP TRƯỢT XỔ DỌC VÀ THANG TRƯỢT VÔ CỰC -->
-        <div style="flex: 1; min-width: 320px;">
+        <div style="flex: 1; min-width: 220px; max-width: 260px;">
             
             <div class="accordion-btn" onclick="togglePanel('performance-panel', 'arrow-1')">
                 <span>📊 Fund Performance & Statistics</span>
@@ -156,6 +156,9 @@
             
             <div id="performance-panel" class="panel">
                 <div class="vertical-slider-container">
+                            <div style="text-align: center; font-size: 11px; color: #666666; font-style: italic; margin-bottom: 2px;">
+            (Scroll ▲▼ / Click to zoom in)
+        </div>
                     <span class="nav-arrow" onclick="moveSlider(-1)">▲</span>
                     
                     <div class="slider-window">
